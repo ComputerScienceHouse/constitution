@@ -41,17 +41,23 @@
 \renewcommand{\thesubsubsection}{\arabic{section}.\Alph{subsection}.\arabic{subsubsection}}
 \titleformat{\section}{\normalfont\Large\bfseries}{Article \thesection}{1em}{}
 \titleformat{\subsection}{\normalfont\large\bfseries}{Section \thesubsection}{1em}{}
+\titleformat{\subsubsection}{\normalfont\normalsize\bfseries}{\thesubsubsection}{1em}{}
+\titlespacing*{\subsubsection}{0pt}{3.25ex plus 1ex minus .2ex}{0.5em}
 
 % Adding an \asubsubsection -- I feel dirty
 %\setcounter{secnumdepth}{5}
 \newcommand{\asubsubsection}[1]{\paragraph{#1} \label{#1}}
 \renewcommand{\theparagraph}{\arabic{section}.\Alph{subsection}.\arabic{subsubsection}.\Alph{paragraph}}
+\titleformat{\paragraph}[block]{\normalfont\normalsize\bfseries}{\theparagraph}{1em}{}
+\titlespacing*{\paragraph}{0pt}{3.25ex plus 1ex minus .2ex}{0.5em}
 
 % Adding \a(sub){3,4}section during merge of bylaws and articles -- I feel _really_ dirty
 \setcounter{secnumdepth}{7}
 \setcounter{tocdepth}{7}
-\newcommand{\asubsubsubsection}[1]{\parindent=0em\subparagraph{#1} \label{#1}}
+\newcommand{\asubsubsubsection}[1]{\subparagraph{#1} \label{#1}}
 \renewcommand{\thesubparagraph}{\arabic{section}.\Alph{subsection}.\arabic{subsubsection}.\Alph{paragraph}.\arabic{subparagraph}}
+\titleformat{\subparagraph}[block]{\normalfont\normalsize\bfseries}{\thesubparagraph}{1em}{}
+\titlespacing*{\subparagraph}{0pt}{3.25ex plus 1ex minus .2ex}{0.5em}
 
 \newcounter{asubsubsubsubsection}[subparagraph]
 \renewcommand{\theasubsubsubsubsection}{\arabic{section}.\Alph{subsection}.\arabic{subsubsection}.\Alph{paragraph}.\arabic{subparagraph}.\Alph{asubsubsubsubsection}}
@@ -221,7 +227,7 @@ It occurs at the end of the final week of the Intro Process.
 
 \asubsubsubsection{Voting}
 On a member-by-member basis, the Intro Eval determines if each Intro Member has successfully completed the Intro Process requirements described in \ref{Expectations of an Introductory Member}.
-An Immediate Relative Majority Vote with two-thirds quorum is required for the Eval to be valid.
+A Secret Immediate Relative Majority Vote with two-thirds quorum is required for the Eval to be valid.
 For an Active Member to be eligible to vote during the Intro Eval they must meet the requirements outlined in \ref{Expectations of Voting Members}.
 Neither absentee nor proxy votes are allowed.
 Intro Members may be offered any of the outcomes listed in \ref{Introductory Evaluation Outcomes}.
@@ -278,7 +284,6 @@ Active Members receive the privilege to:
 	\item Use CSH facilities
 	\item Receive priority for on-floor housing, or apply for On-Floor Status
 \end{enumerate}
-
 Active Members currently on co-op forfeit their right to vote on house issues, and likewise do not count towards quorum.
 Exceptions may be made at the discretion of the Evaluations Director.
 
@@ -526,7 +531,7 @@ A Voting E-Board Member is considered to be any E-Board Member with a non-zero v
 	\item To exercise general supervision over R\&D operations
 	\item To oversee the planning, organization, and construction of technical projects for the CSH's benefit
 	\item To strive to fulfill the CSH's need for technical equipment
-	\item To organize and support Technical Seminars
+	\item To organize, support, and approve Technical Seminars
 	\item To vote on issues presented to E-Board
 \end{enumerate}
 
@@ -611,12 +616,10 @@ However, the Chair and at least two-thirds of the Voting Members of E-Board must
 
 \asubsubsection{Dual Directors}
 Social and R\&D are the only Voting E-Board positions that allow for dual directors.
-
 If two candidates elect to run as dual directors, their names are placed together on a single line of the election ballot.
 If they are also nominated as a single directorship or as dual directors with another member, their votes are not cumulative.
 Each different nomination must be a separate entry on the election ballot.
 Ad Hoc Directors are not restricted to single or dual directors.
-
 The following special cases cover the operation of dual directors:
 \begin{enumerate}
 	\item If one of the members in a dual directorship resigns, or for any other reason ends the term of office, the other member in the dual directorship must also step down and the office becomes vacated.
@@ -849,7 +852,6 @@ After this date, dues collection is suspended until the start of the next academ
 		\\ \hline
 	\end{tabular}
 \end{center}
-
 % The suggested total operating budget is $8360.
 % This figure comes from having approximately 55 on-floor members with $80 per semester dues (totaling $8800) minus 5% set aside for Accumulated.
 Dues collected from on-floor members are to be distributed into directorship budgets as shown in the above table.
@@ -945,7 +947,7 @@ Votes are cast on ballots that provide a means to indicate every possible option
 For constitutional modification, candidate selection, and officer removal votes, the voting period must be at least forty-eight hours in length.
 For any other type of vote, the voting period must be at least twenty-four hours.
 The minimum length of the voting period may be explicitly lengthened, but never shortened, in the text describing the actual vote.
-
+\\* \\*
 The voting period opens once ballots are distributed to each member eligible to cast a vote.
 At the end of the voting period, the Chair of the Vote collects the ballots, closing the voting period.
 The Vote Counters then tally the results.
@@ -984,7 +986,6 @@ The fraction is specified in the text describing the vote, for example, "Two-Thi
 
 \asubsection{Ranked Choice}
 In a Ranked Choice Vote, voters rank the options by placing a '1' by their first choice, a '2' by their second choice, and so on, until they no longer wish to express any further preferences or run out of options.
-
 The winning option is selected outright if it gains more than half the votes cast as a first preference.
 If not, the option with the fewest number of first preference votes is eliminated and their votes move to the second preference marked on the ballots.
 This process continues until one option has half of the votes cast and is elected.
