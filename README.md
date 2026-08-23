@@ -1,4 +1,3 @@
-# CSH Constitution
 The master branch's HEAD is the current legal constitution of CSH.
 
 A compiled version of the document can be found [here](https://constitution.csh.rit.edu).
